@@ -1,0 +1,49 @@
+<div>
+  <ol class="breadcrumb">
+    <li><a href="<%= index_path %>">Home</a></li>
+    <li><a href="<%= rpost_index_path %>">Post</a></li>
+    <li class="active">Content</li>
+  </ol>
+</div>
+
+<div class="page-header">
+  <h1 style="margin-left: 20px"><%= @rpost.title %>&nbsp&nbsp<small style="font-size: 0.5em">贴主：<%= @rpost.user.username %></small></h1>
+  <% if @rpost.user.id == current_user.id %>
+  <span style="padding-left: 450px"><small><a href="<%= delete_rpost_path(@rpost.id) %>" style="color: #FF0000">删除</a></small></span>
+  <% end %>
+</div>
+
+
+<div class="well">
+	<span style="margin-left: 5px">内容：</span>
+	<p style="text-indent: 30px; margin: 0px 20px;" ><%= @rpost.content %></p>
+</div>
+
+
+<div class="well">
+	<p>用户评论：</p>
+	<% @user.each do |user| %>
+	<ul style="text-indent: 30px; margin: 0px 20px;" class="list-group">
+		<% user.reviews.each do |c| %>
+		<% if @rpost == c.rpost %>
+  		<li class="list-group-item"> <span style="font-size: 1.5em">@<%= c.user.username %>:</span> <%= c.content %>
+  			<% if c.user.id == current_user.id %>
+  			<span style="padding-left: 50px"><small><a href="<%= delete_review_path(c.rpost.id,c.id) %>" style="color: #FF0000">删除</a></small></span>
+  			<% end %>
+  		</li>
+  		<% end %>
+  		<% end %>
+	</ul>
+	<% end %>
+</div>
+
+
+<div>
+	<form action="<%= edit_review_path(@rpost.id) %>" method="post">
+	  <div class="form-group">
+	  	<label for="Content">写点评论：</label>
+		<textarea class="form-control" rows="3" id="Content" name="content" placeholder="Content"></textarea>
+	  </div>
+	  <button type="submit" class="btn btn-primary">发帖</button>
+	</form>
+</div>

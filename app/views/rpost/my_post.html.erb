@@ -1,0 +1,10 @@
+<div class="list-group">
+  <% @rpost.each do |r| %>
+  <a href="<%= detail_post_path(r.id) %>" class="list-group-item list-group-item-info">
+  	<div style="margin-left: 25px">
+  		<h3 class="list-group-item-heading"><%= r.title %></h4>
+    	<p class="list-group-item-text"><%= r.content %></p>
+  	</div>
+  </a>
+  <% end %>
+</div>
