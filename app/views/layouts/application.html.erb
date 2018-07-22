@@ -7,17 +7,32 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <style>
+      body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    color: #888888;
+    margin: 0;
+    line-height: 1.428571429;
+    display: block;
+    background: url(/assets/1.png) left top repeat;
+    }
+    li a {
+      text-decoration: none;
+    }
+    </style>
   </head>
 
   <body>
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
+    <nav class="navbar navbar-fixed-top" >
+      <div class="container-fluid " >
           <div class="navbar-header">
-            <a class="navbar-brand" href="<%= index_path %>">
-              <img alt="XTU" src="...">
+            <a class="navbar-brand" href="<%= index_path %>" style="text-decoration: none;">
+              <img alt="XTU" src="/assets/湘潭大学校徽.png" style="width: 80px;">
             </a>
           </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
           <ul class="nav navbar-nav navbar-right">
             <% if !current_user %>
               <li><a href="<%= login_path %>">登录</a></li>
@@ -38,6 +53,7 @@
         </div>
       </div>
     </nav>
+    <div style="margin-top: 50px"> </div>
     <%= yield %>
   </body>
 </html>

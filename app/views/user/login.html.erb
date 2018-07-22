@@ -1,12 +1,43 @@
-<form action="<%= login_upgrade_path %>" method="post">
-  <div class="form-group">
-    <label for="Username">用户名</label>
-    <input type="text" class="form-control" id="Username" name="username" placeholder="Username">
-  </div>
-  <div class="form-group">
-    <label for="Password">密码</label>
-    <input type="password" class="form-control" id="Password" name="password" placeholder="Password">
-  </div>
+<!-- <div style="width: 200px;">
+	<form action="<%= login_upgrade_path %>" method="post">
+	  <div class="form-group">
+	    <label for="Username">用户名</label>
+	    <input type="text" class="form-control" id="Username" name="username" placeholder="Username">
+	  </div>
+	  <div class="form-group">
+	    <label for="Password">密码</label>
+	    <input type="password" class="form-control" id="Password" name="password" placeholder="Password">
+	  </div>
 
-<button type="submit" class="btn btn-primary">登录</button>
-</form>
+	<button type="submit" class="btn btn-primary">登录</button>
+	</form>
+</div>
+ -->
+ <section class="content">
+ 	<br><br><br><br><br><br><br>
+	<h1 class="animated fadeInDown delay-07s">Union</h1>
+      <ul class="we-create animated fadeInUp delay-1s">
+          <h2>
+            Here's what you desire.
+          </h2>
+      </ul>
+	<br>
+	<form name="aspnetForm"  action="<%= login_upgrade_path %>" method="post" id="aspnetForm">
+	<div>
+		<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTAyMjYwODMwM2QYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgEFE2luZGV4MSRJbWFnZUJ1dHRvbjFGlq16btGfTJkWPIk72K0sHs06fQ==" />
+	</div>
+    <div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4E47DD21" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWCwLGl9CbCALHr8yPAwKE6OTZBgK+wqHlDAK3vdnfBwLDg+beCALcg+beCALag+beCALeg6bdCAL90MaUCgLSuqfvCiCThIFRuVPb8srVQ1QiELI8XaOc" />
+    </div>
+	<input name="username" type="text" id="index1_username" maxlength="50" class="username" placeholder="用户名 / Username" />
+	<input name="password" type="password" id="index1_Password" maxlength="50" class="password" placeholder="密码 / Password" />
+	<input type="submit" name="index1$Button1" value="登录" id="index1_Button1" />						
+	</form>
+	<div class="social">
+		<ul>
+			<li><a href="<%= new_path %>">注册 / Join</a></li>
+			</ul>
+	</div>
+</section>

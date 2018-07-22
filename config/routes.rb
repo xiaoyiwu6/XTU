@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root 'user#index'
   post '/user/create' => 'user#create' ,:as =>'create'
   get '/user/index' => 'user#index' ,:as =>'index'
+  get '/user/index/function' => 'user#function' ,:as => 'function'
   get '/user/index/new' => 'user#new' ,:as =>'new'
   get '/user/login' => 'user#login' ,:as =>'login'
   post '/user/login/upgrade' => 'user#upgrade' ,:as =>'login_upgrade'
@@ -11,6 +12,7 @@ Rails.application.routes.draw do
   get '/user/edit' => 'user#edit' ,:as =>'edit'
   get '/user/edit/change' => 'user#change' ,:as =>'change'
   post '/user/edit/change/change_password' => 'user#change_password' ,:as =>'change_password'
+  get '/user/platform' => 'user#platform' ,:as => 'platform'
 
   get '/rpost/index' => 'rpost#rpost_index' ,:as => 'rpost_index'
   get '/rpost/make_post' => 'rpost#make_post' ,:as => 'make_post'

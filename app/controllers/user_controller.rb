@@ -49,4 +49,7 @@ class UserController < ApplicationController
 			redirect_to :change
 		end
 	end
+	def function
+		
+	end
 end

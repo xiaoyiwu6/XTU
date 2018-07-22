@@ -1,13 +1,21 @@
-<div class="panel panel-default">
-  <div class="panel-heading"><span style="font-weight: bold; font-size: 2em">个人中心</span></div>
-  <div class="panel-body">
-    <p>编辑：</p>
-  </div>
-    <ul class="list-group">
-	  <li class="list-group-item"><a href="<%= change_path %>">账户管理</a></li>
-	  <li class="list-group-item"><a href="<%= my_post_path %>">我的帖子</a></li>
-	  <li class="list-group-item">Morbi leo risus</li>
-	  <li class="list-group-item">Porta ac consectetur ac</li>
-	  <li class="list-group-item">Vestibulum at eros</li>
-	</ul>
-</div>
+<!-- <div class="panel panel-default" style="margin-top: 50px"> -->
+  <div class="panel-heading" style="position: relative; opacity: 0.5">
+    <div class="panel-default" style="position: absolute;">
+    	<span style="font-weight: bold; font-size: 2em">个人中心</span>
+    	<p>编辑：</p>
+	  	<ul class="list-group" id="edit">
+		  <li class="list-group-item"><a href="<%= change_path %>">账户管理</a></li>
+		  <li class="list-group-item"><a href="<%= my_post_path %>">我的帖子</a></li>
+		  <li class="list-group-item">Morbi leo risus</li>
+		  <li class="list-group-item">Porta ac consectetur ac</li>
+		  <li class="list-group-item">Vestibulum at eros</li>
+		</ul>
+	</div>
+  </div >
+  <style>
+  	#edit li a {
+  		color: blue;
+  	}
+  </style>
+    
+<!-- </div> -->
