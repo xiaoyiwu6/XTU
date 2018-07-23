@@ -28,7 +28,7 @@
     <nav class="navbar navbar-fixed-top" >
       <div class="container-fluid " >
           <div class="navbar-header">
-            <a class="navbar-brand" href="<%= index_path %>" style="text-decoration: none;">
+            <a class="navbar-brand" href="<%= index_path %>" style="text-decoration: none;" id="use_index">
               <img alt="XTU" src="/assets/湘潭大学校徽.png" style="width: 80px;">
             </a>
           </div>
@@ -38,6 +38,7 @@
               <li><a href="<%= login_path %>">登录</a></li>
               <li><a href="<%= new_path %>">注册</a></li>
             <% else %>
+              <li><a href="<%= function_path %>">Union功能</a></li>
               <li><a href="<%= rpost_index_path %>">学生论坛</a></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">欢迎&nbsp&nbsp <%= current_user.username %> <span class="caret"></span></a>
@@ -53,7 +54,7 @@
         </div>
       </div>
     </nav>
-    <div style="margin-top: 50px"> </div>
+    <div style="margin-top: 100px"> </div>
     <%= yield %>
   </body>
 </html>

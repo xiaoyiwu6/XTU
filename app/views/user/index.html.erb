@@ -137,14 +137,19 @@ img {
 vertical-align: middle;
     border: 0;
 }
+#use_index
+{
+    opacity: 0;
+}
      </style>
 </head>
 <body>
+
 <header class="header" id="header" style="margin-top: -150px">
     <div class="container">
       <figure class="logo animated fadeInDown delay-07s">
-        <a href="#">
-          <img src="http://react-primer.com/img/logo_noBG_green.png" alt="">
+        <a href="<%= function_path %>">
+          <img src="/assets/湘潭大学校徽.png" alt="XTU">
         </a>
       </figure>
       <h1 class="animated fadeInDown delay-07s">Union</h1>
@@ -155,7 +160,8 @@ vertical-align: middle;
       </ul>
       <a class="link animated fadeInUp delay-1s servicelink" href="<%= function_path %>">开始使用</a>
     </div> 
-  </header>  
+</header>  
+
 </body>
 </html>
 
